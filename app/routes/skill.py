@@ -11,3 +11,8 @@ def users():
 def findAllSkills():
     data = db.findAllSkills()
     return jsonify(data), 200
+
+@routes.route("/skills/<skill>")
+def findSkill(skill):
+    data = db.findSkill(skill)
+    return jsonify(data), 200
