@@ -9,10 +9,11 @@ def users():
 
 @routes.route("/skills")
 def findAllSkills():
-    data = db.findAllSkills()
+    skills = db.findAllSkills()
+    data = list(map(lambda s: s.to_dict(), skills))
     return jsonify(data), 200
 
 @routes.route("/skills/<skill>")
 def findSkill(skill):
-    data = db.findSkill(skill)
-    return jsonify(data), 200
+    skill = db.findSkill(skill)
+    return jsonify(skill.to_dict()), 200
