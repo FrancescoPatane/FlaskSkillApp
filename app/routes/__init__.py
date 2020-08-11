@@ -3,4 +3,4 @@ routes = Blueprint('routes', __name__)
 
 from .index import *
 from .skill import *
-# from .employee import *
+from .employee import *
