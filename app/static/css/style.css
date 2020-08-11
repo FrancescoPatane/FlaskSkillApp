@@ -1,0 +1,17 @@
+
+body{
+  background-color: #f9f9f9;
+}
+
+.navbar {
+  background-color: #202e4f !important;
+}
+
+.navbar-brand {
+  color: lightblue !important;
+  font-size: 25px;
+}
+
+#main-container {
+  padding: 3%;
+}
