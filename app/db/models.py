@@ -35,11 +35,11 @@ class Employee(db.Model):
     skills = relationship('EmployeeSkill', backref='employee', lazy=True)
 
 
-    def __init__(self, name, surname, email, role):
-        self.name = name
-        self.surname = surname
-        self.email = email
-        self.role = role
+    # def __init__(self, name, surname, email, role):
+    #     self.name = name
+    #     self.surname = surname
+    #     self.email = email
+    #     self.role = role
 
     def to_dict(self):
         data = {
