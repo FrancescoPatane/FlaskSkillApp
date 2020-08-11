@@ -1,11 +1,8 @@
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String
-from dataclasses import dataclass
-from .. import sqlAlchemy as db
+from ..ext import sqlAlchemy as db
 
 
-
-@dataclass
 class Skill(db.Model):
     __tablename__ = 'skill'
 
