@@ -1,6 +1,11 @@
-from flask import jsonify, abort, request
-from . import routes
+from flask import jsonify, abort, request, Blueprint
 import app.db as db
+
+
+routes = Blueprint('skill_routes', __name__)
+
+
+
 
 @routes.route('/users')
 def users():

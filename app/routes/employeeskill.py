@@ -1,6 +1,7 @@
-from flask import jsonify, request
-from . import routes
+from flask import jsonify, request, Blueprint
 import app.db as db
+
+routes = Blueprint('employee_skill_routes', __name__)
 
 
 @routes.route("/employeeskills", methods=['POST'])
