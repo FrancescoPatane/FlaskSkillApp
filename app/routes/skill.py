@@ -1,4 +1,4 @@
-from flask import jsonify
+from flask import jsonify, abort, request
 from . import routes
 import app.db as db
 
@@ -16,4 +16,10 @@ def findAllSkills():
 @routes.route("/skills/<skill>")
 def findSkill(skill):
     skill = db.findSkill(skill)
+    return jsonify(skill.to_dict()), 200
+
+@routes.route("/skills", methods=['POST'])
+def addSkill():
+    data = request.json
+    skill = db.saveOrUpdateSkill(data)
     return jsonify(skill.to_dict()), 200

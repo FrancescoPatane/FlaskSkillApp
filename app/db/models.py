@@ -9,6 +9,10 @@ class Skill(db.Model):
     name = Column(String(25), primary_key=True)
     description = Column(String(255))
 
+    def __init__(self, name, description):
+        self.name = name
+        self.description = description
+
     def to_dict(self):
         data = {
             'name': self.name,
