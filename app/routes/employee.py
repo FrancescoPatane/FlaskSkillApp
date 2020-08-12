@@ -11,7 +11,7 @@ def findAllEmployees():
     return jsonify(data), 200
 
 @routes.route("/employees/<email>")
-def findEmployee(email):
+def findEmployeeByEmail(email):
     employee = db.findEmployeeByEmail(email)
     return jsonify(employee.to_dict()), 200
 
