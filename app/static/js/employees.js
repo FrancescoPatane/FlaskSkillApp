@@ -8,7 +8,7 @@ function fetchEmployeesData() {
 
 function setEmplTableHtml(employees) {
   let tableHtml = ""
-  employees.map(e => tableHtml += "<tr><td><button type='button' class='btn btn-light' onclick=\"selectEmployee('" + e.email + "')\"><i class='fa fa-search fa-2' ></i></button></td><td>" + e.name + "</td><td>" + e.surname + "</td><td>" + e.email + "</td><td>" + e.role + "</td></tr>")
+  employees.map(e => tableHtml += "<tr><td><button type='button' class='btn btn-light' onclick=\"selectEmployee('" + e.email + "')\"><i class='fa fa-search fa-2' ></i></button></td><td>" + e.name + " " + e.surname  + "</td><td>" + e.role + "</td></tr>")
   document.getElementById('employee-table-body').innerHTML = tableHtml
   $('#employee-table').DataTable()
 }
