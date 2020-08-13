@@ -1,1 +1,1 @@
-web: gunicorn application:flask_skill_manager
+web: gunicorn application:app
