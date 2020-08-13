@@ -17,3 +17,9 @@ def index_route():
 def employees_ledger():
     renderPath = Path(__file__).parent.parent / "templates/employees.html"
     return render_template(renderPath.name)
+
+
+@routes.route("/ledger/skills")
+def skills_ledger():
+    renderPath = Path(__file__).parent.parent / "templates/skills.html"
+    return render_template(renderPath.name)

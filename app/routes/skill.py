@@ -23,6 +23,12 @@ def findSkill(skill):
     skill = db.findSkill(skill)
     return jsonify(skill.to_dict()), 200
 
+@routes.route("/skills/<skill>/employees")
+def findSkillWithEmployess(skill):
+    data = db.findSkillWithEmployess(skill)
+    return jsonify(data), 200
+
+
 @routes.route("/skills", methods=['POST'])
 def addSkill():
     data = request.json

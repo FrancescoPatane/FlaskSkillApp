@@ -34,4 +34,4 @@ function populateEmployeeCard(employee){
 
 
 
-employees = fetchEmployeesData()
+fetchEmployeesData()
